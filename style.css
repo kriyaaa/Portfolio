@@ -354,7 +354,9 @@ header .social a:hover{
     position: relative;
     border-radius: 1rem;
     overflow: hidden;
-    box-shadow: 0 0 20px rgba(147, 147, 147, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .portfolio .portfolio-container .portfolio-item .image img{
@@ -586,6 +588,10 @@ header .social a:hover{
         padding: 1rem 4rem;
     }
 
+    .portfolio .portfolio-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
 }
 
 @media (max-width: 991px){
@@ -605,6 +611,12 @@ header .social a:hover{
     body{
         padding: 0;
     }
+
+    .portfolio .portfolio-container {
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 20px;
+        padding: 3rem;
+    }
 }
 
 @media (max-width: 768px){
@@ -613,6 +625,15 @@ header .social a:hover{
         font-size: 50%;
     }
 
+    .portfolio .portfolio-container {
+        grid-template-columns: repeat(1, 1fr);
+        padding: 2rem;
+    }
+
+    .portfolio-item{
+        padding: 3rem;
+    }
+    
 }
 
 @media (max-width: 400px){
@@ -625,12 +646,31 @@ header .social a:hover{
         width: 100%;
     }
 
-    .portfolio .box-container .box{
-        width: 100%;
-    }
-
     .contact .row form{
         margin: 3rem 0 ;
+    }
+
+    .portfolio .portfolio-container {
+        grid-gap: 15px;
+    }
+
+    .portfolio-item{
+        padding: 3rem;
+    }
+    
+    .portfolio .portfolio-container .portfolio-item .details h4 {
+        font-size: 1.2rem;
+    }
+    
+    .portfolio .portfolio-container .portfolio-item .details p {
+        font-size: 1rem;
+    }
+    
+    .portfolio .portfolio-container .portfolio-item .details a {
+        font-size: 1.2rem;
+        width: 3.5rem;
+        height: 3.5rem;
+        line-height: 36px;
     }
 
 }
